@@ -1,15 +1,27 @@
-<html lang=""pt-BR"
-
+<html lang="pt-BR">
+<head>
+<title>Minha lista de tarefas</title>
+<link rel = "stylesheet" href = "{{url_for('static', filename='style.css')}}">
+</head>
 <body>
-    aqui fica a lista de tarefas 
-    {{ lista }}
+    aqui fica a lista de tarefas
+    <ol>
+    {% if lista %}
+          {% for item in lista %}
+            <li>{{ item }}</li>
+            <a href="/delete/{{loop.index0}}"><button>🗑️</button></a>
+        {% endfor %}
+</ol>
+        {% else %}
+            <p>Não há items! parabéns! Você fez tudo das tarefas</p>
+        {% endif %}
+    
+    <form action="/add" method="post">
+     <input type="text" name="nova">
+     <button type ="submit" > Adicionar </button>
 
-    <fromn acction=""/add method="post">
-     <input type=""text" nome+"nova"
-     <button type ="subit" > Adicionar </button>
-
-     </fromn>
-
+     </form>
 
 </body>
+
 </html>

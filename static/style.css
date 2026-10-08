@@ -1,0 +1,18 @@
+body{
+    background-color: rgb(243, 156, 196);
+    flex-direction: column;
+    align-items:center;
+}
+button{
+    color:rgb(250, 155, 211);
+     background-color:pink;
+     padding: 5px 20px ;
+     font-size: 18px;
+     border-radius: 10px;
+     border-color: rgb(247, 165, 179);
+     border-width: 3px;
+    }
+button:hover{
+    background-color:rgb(241, 140, 208)
+}
+
